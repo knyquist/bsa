@@ -109,7 +109,6 @@ class GlobalAlignment:
         i = self.trace.shape[0]-1
         j = self.trace.shape[1]-1
         
-        tracing_back = True
         while (i > 0) | (j > 0):
             state = self.trace[i, j]
             if state == 'd':
