@@ -138,3 +138,18 @@ class GlobalAlignment:
                     i -= 1
                 
         return a1[::-1], a2[::-1]
+
+    def pprint_alignment(self):
+        """
+        Pretty print the alignment
+        """
+        bars = ''
+        ismatched = np.array(list(self.alignment[0])) == np.array(list(self.alignment[1]))
+        for ans in ismatched:
+            if ans == True:
+                bars += '|'
+            else:
+                bars += ' '
+        print self.alignment[0]
+        print bars
+        print self.alignment[1]
